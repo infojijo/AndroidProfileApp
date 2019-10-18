@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Profile App</string>
+    <string name="profile_information">Profile Information</string>
+    <string name="profile_name">Profile Name</string>
+    <string name="profile_designation">Designation</string>
+    <string name="profile_years_of_exp">No. of Years</string>
+    <string name="profile_technologies">Technologies</string>
+    <string name="profile_exp_summary">Experience Details</string>
+    <string name="profile_education_summary">Education Details</string>
+    <string name="network_connectivity_issue">Issues with the connectivity? </string>
+    <string name="retry">Retry!</string>
+    <string name="server_not_responding">Server is not responding</string>
+    <string name="str_testing_profile_name">JIJO JOSEPH JOSE</string>
+</resources>

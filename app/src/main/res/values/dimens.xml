@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="padding_default">10dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="elev_1">3dp</dimen>
+    <dimen name="elev_2">6dp</dimen>
+    <dimen name="elev_3">9dp</dimen>
+    <dimen name="t_size_14">14sp</dimen>
+
+    <dimen name="card_radius">7dp</dimen>
+    <dimen name="header_title">20sp</dimen>
+    <dimen name="profile_title">18sp</dimen>
+    <dimen name="profile_description">14sp</dimen>
+    <dimen name="profile_image_height">90dp</dimen>
+    <dimen name="profile_image_width">120dp</dimen>
+    <dimen name="margin_large">50dp</dimen>
+    <dimen name="zerodp">0dp</dimen>
+</resources>

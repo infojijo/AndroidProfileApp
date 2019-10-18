@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="profile"
+            type="pojo.Professional" />
+
+        <variable
+            name="tech"
+            type="pojo.Technology" />
+
+    </data>
+
+    <RelativeLayout
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="views.MainActivity">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_item_professional"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_default"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/padding_default"
+            android:layout_marginBottom="@dimen/padding_default"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="@dimen/zerodp"
+            card_view:cardBackgroundColor="@color/background"
+            card_view:cardCornerRadius="@dimen/card_radius"
+            card_view:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/t_item_professional_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/blue_light"
+                    android:gravity="start|center_vertical"
+                    android:padding="@dimen/padding_default"
+                    android:text="@string/profile_information"
+                    android:textSize="@dimen/profile_title"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/t_item_professional_title"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/padding_default">
+
+                    <TextView
+                        android:id="@+id/t_item_profile_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{profile.name}"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/profile_description" />
+
+                    <TextView
+                        android:id="@+id/t_item_profile_designation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/t_item_profile_name"
+                        android:text="@{profile.designation}"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/profile_description" />
+
+                    <TextView
+                        android:id="@+id/t_item_profile_years_of_exp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/t_item_profile_designation"
+                        android:text="@{profile.yearsofexp}"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/profile_description" />
+
+                    <TextView
+                        android:id="@+id/t_item_profile_tech"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/t_item_profile_years_of_exp"
+                        android:text="@{tech.tech1 +' '+ tech.tech2 +' '+ tech.tech3}"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/profile_description" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_item_exp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_item_professional"
+            android:layout_marginStart="@dimen/padding_default"
+            android:layout_marginEnd="@dimen/padding_default"
+            android:layout_marginBottom="@dimen/padding_default"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="openExperienceDetails"
+            android:padding="@dimen/zerodp"
+            card_view:cardBackgroundColor="@color/background"
+            card_view:cardCornerRadius="@dimen/card_radius"
+            card_view:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/t_item_exp_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/blue_light"
+                    android:gravity="start|center_vertical"
+                    android:padding="@dimen/padding_default"
+                    android:text="@string/profile_exp_summary"
+                    android:textSize="@dimen/profile_title"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_item_edu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_item_exp"
+            android:layout_marginStart="@dimen/padding_default"
+            android:layout_marginEnd="@dimen/padding_default"
+            android:layout_marginBottom="@dimen/padding_default"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="openEducationDetails"
+            android:padding="@dimen/zerodp"
+            card_view:cardBackgroundColor="@color/background"
+            card_view:cardCornerRadius="@dimen/card_radius"
+            card_view:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/t_item_edu_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/blue_light"
+                    android:gravity="start|center_vertical"
+                    android:padding="@dimen/padding_default"
+                    android:text="@string/profile_education_summary"
+                    android:textSize="@dimen/profile_title"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/layout_home_no_network"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/translucent_dark"
+            android:clickable="true"
+            android:elevation="@dimen/elev_3"
+            android:focusable="true"
+            android:paddingStart="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_12"
+            android:paddingEnd="@dimen/margin_10"
+            android:paddingBottom="@dimen/margin_12"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/home_network_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/t_home_network_retry"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:maxLines="1"
+                android:paddingStart="@dimen/margin_10"
+                android:paddingEnd="@dimen/margin_5"
+                android:text="@string/network_connectivity_issue"
+                android:textColor="@color/white"
+                android:textSize="@dimen/t_size_14" />
+
+            <TextView
+                android:id="@+id/t_home_network_retry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingStart="@dimen/margin_10"
+                android:paddingEnd="@dimen/margin_10"
+                android:text="@string/retry"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/t_size_14" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

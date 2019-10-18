@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="blue">#667cff</color>
+    <color name="orange">#ff5a00</color>
+    <color name="blue_light">#B6C7E9</color>
+    <color name="background">#AAe6e6e6</color>
+    <color name="translucent_dark">#D9000000</color>
+
+    <array name="swipeRefreshColors">
+        <item>@color/orange</item>
+        <item>@color/blue</item>
+        <item>@color/colorPrimary</item>
+        <item>@color/colorAccent</item>
+    </array>
+</resources>
